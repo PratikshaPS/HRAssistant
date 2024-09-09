@@ -21,10 +21,6 @@ import streamlit as st
 from htmlTemplates import css, bot_template, user_template
 from langchain_community.embeddings import OpenAIEmbeddings
 
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 llamaparse_api_key = os.environ.get('LLAMA_CLOUD_API_KEY')
 openai_api_key = os.environ.get("OPENAI_API_KEY")
 
